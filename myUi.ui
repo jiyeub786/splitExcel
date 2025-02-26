@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>537</width>
+    <height>764</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>엑셀분리 프로그램</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="x-office-calendar"/>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="bttnLoad01">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>40</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>파일선택</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttnLoad02">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>80</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>파일선택</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttnLoad03">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>120</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>폴더선택</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttnStartWork">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>610</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>시작</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttnExit">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>610</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>프로그램종료</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit01">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>40</y>
+      <width>381</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="plainText">
+     <string>원본파일을 선택해주세요</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit02">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>80</y>
+      <width>381</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="plainText">
+     <string>양식파일을 선택해주세요</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit03">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>120</y>
+      <width>381</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>48</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>원본파일</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>48</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>양식파일</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>48</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>저장경로</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>48</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>작업정의</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>240</y>
+      <width>461</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::North</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="documentMode">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="tab01">
+     <attribute name="title">
+      <string>대상시트 및 복사붙여넣기 정의</string>
+     </attribute>
+     <widget class="QTableWidget" name="table01">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>30</y>
+        <width>451</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>451</width>
+        <height>200</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>451</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
+      <property name="dragEnabled">
+       <bool>true</bool>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="showGrid">
+       <bool>true</bool>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::SolidLine</enum>
+      </property>
+      <property name="sortingEnabled">
+       <bool>false</bool>
+      </property>
+      <row/>
+      <column>
+       <property name="text">
+        <string>시트 명칭</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>필터 위치</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>복사 범위</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>붙여넣기 위치</string>
+       </property>
+      </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string>시트1</string>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>2</string>
+       </property>
+      </item>
+      <item row="0" column="2">
+       <property name="text">
+        <string>A2:Z900</string>
+       </property>
+      </item>
+      <item row="0" column="3">
+       <property name="text">
+        <string>A2</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="bttnCreateRow01">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>행추가</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab02">
+     <attribute name="title">
+      <string>분리 키워드 정의</string>
+     </attribute>
+     <widget class="QTableWidget" name="table02">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>30</y>
+        <width>181</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>false</bool>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+      <row/>
+      <column>
+       <property name="text">
+        <string>분리 키워드</string>
+       </property>
+      </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string>키워드1</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="bttnCreateRow02">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>행추가</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="bttnSaveConfig">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>610</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>저장</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttnLoadConfig">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>610</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>불러오기</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>48</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>저장명칭</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit04">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>160</y>
+      <width>381</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit05">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>200</y>
+      <width>381</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>48</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>저장날짜</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttnStartTest">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>610</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>테스트</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttnShowLog">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>610</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>로그보기</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>580</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>설정 저장 및 불러오기</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>580</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>작업수행</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>10</y>
+      <width>161</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>제작: 김지엽,  v2025.02.26</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttnForceStop">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>610</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>강제종료</string>
+    </property>
+   </widget>
+   <zorder>bttnLoad01</zorder>
+   <zorder>bttnLoad02</zorder>
+   <zorder>bttnStartWork</zorder>
+   <zorder>bttnExit</zorder>
+   <zorder>plainTextEdit01</zorder>
+   <zorder>plainTextEdit02</zorder>
+   <zorder>plainTextEdit03</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_3</zorder>
+   <zorder>bttnLoad03</zorder>
+   <zorder>label_4</zorder>
+   <zorder>tabWidget</zorder>
+   <zorder>bttnSaveConfig</zorder>
+   <zorder>bttnLoadConfig</zorder>
+   <zorder>label_5</zorder>
+   <zorder>plainTextEdit04</zorder>
+   <zorder>plainTextEdit05</zorder>
+   <zorder>label_6</zorder>
+   <zorder>bttnStartTest</zorder>
+   <zorder>bttnShowLog</zorder>
+   <zorder>label_7</zorder>
+   <zorder>label_8</zorder>
+   <zorder>label_9</zorder>
+   <zorder>bttnForceStop</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>537</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
