@@ -1,0 +1,20 @@
+#패키지 목록 내보내기
+pip freeze > my_req_libs.txt
+
+#패키지 목록 설치
+pip install -r my_req_libs.txt
+
+#UI 컴파일 
+pyside6-uic myUi.ui -o myUi.py
+pyside6-uic logUi.ui -o logUi.py
+pyside6-uic UsageUi.ui -o usageUi.py
+
+
+#디자이너 열기
+pyside6-designer
+
+
+
+
+#스펙파일로 exe파일 만들기
+pyinstaller SplitExcel.spec
